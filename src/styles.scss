@@ -1,0 +1,66 @@
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+
+$main-color:#1E5A83;
+
+$sec-color:#ffffff;
+
+$dont-active-color:#5A5A5A;
+
+*{
+  font-family: cairo;
+}
+
+
+.m-color{
+  color:$main-color !important;
+}
+
+.m-bg-color{
+  background-color:$main-color !important;
+}
+
+.s-color{
+  color:$sec-color !important;
+}
+
+.s-bg-color{
+  background-color:$sec-color !important;
+}
+
+.not-active-color{
+  color:$dont-active-color !important;
+}
+
+.not-active-bg-color{
+  background-color:$dont-active-color !important;
+}
+body {
+  background-image:url("assets/background 1.png") ;
+background-position: center center;
+background-repeat: repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+.pointer
+{
+  cursor: pointer;
+}
+a{text-decoration: none;}
+
+p{
+  line-height: 2;
+}
+
+@media (max-width :400px) {
+.container{
+--bs-gutter-x:0 ; --bs-gutter-y:0;
+}
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
