@@ -1,9 +1,26 @@
 .brand img{
 width: 300px;
 }
+
+
+@media screen and (max-width:300px) {
+  .brand img{
+    width: 200px;
+  }
+}
+
+.brand{
+  width: fit-content;
+}
+
+
+
 .footer{
+
   border-top-left-radius: 70px;
   border-top-right-radius: 70px;
+  //  padding-right: 60px;
+  // padding-left: 60px;
 }
 a
 {
@@ -11,4 +28,13 @@ a
 }
 :host{
   margin-top: auto;
+}
+
+
+.form-check-input{
+  width: 50px;
+  height: 20px;
+}
+label{
+  font-size: 18px;
 }

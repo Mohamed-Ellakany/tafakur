@@ -1,4 +1,4 @@
-import { Component, OnInit,  } from '@angular/core';
+import { Component, HostListener, OnInit,  } from '@angular/core';
 import { AzkarService } from '../azkar.service';
 
 @Component({
@@ -16,7 +16,6 @@ constructor( private _AzkarService:AzkarService){
 ngOnInit(): void {
 
 }
-
 
 
 }

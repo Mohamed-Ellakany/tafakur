@@ -4,11 +4,40 @@
   @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
 
-$main-color:#1E5A83;
 
-$sec-color:#ffffff;
+  :root ,body{
+    direction: rtl;
 
-$dont-active-color:#5A5A5A;
+
+
+  [data-theme="dark"]{
+
+  --main-color:#0C8EE1;
+
+  --sec-color:#2A2A2A;
+
+  --dont-active-color:#5A5A5A;
+
+--background-image:url('./assets/dark/DarkBackGround.png');
+
+}
+
+
+[data-theme="light"]{
+
+--main-color:#1E5A83;
+
+--sec-color:#ffffff;
+
+--dont-active-color:#5A5A5A;
+
+--background-image:url('./assets/background\ 1.png');
+
+
+}
+
+
+  }
 
 *{
   font-family: cairo;
@@ -16,30 +45,42 @@ $dont-active-color:#5A5A5A;
 
 
 .m-color{
-  color:$main-color !important;
+  color:var(--main-color) !important;
 }
 
 .m-bg-color{
-  background-color:$main-color !important;
+  background-color:var(--main-color) !important;
 }
 
 .s-color{
-  color:$sec-color !important;
+  color:var(--sec-color) !important;
 }
 
 .s-bg-color{
-  background-color:$sec-color !important;
+  background-color:var(--sec-color) !important;
 }
 
 .not-active-color{
-  color:$dont-active-color !important;
+  color:var(--dont-active-color) !important;
 }
 
 .not-active-bg-color{
-  background-color:$dont-active-color !important;
+  background-color:var(--dont-active-color) !important;
 }
+.border-mainColor{
+  border: 3px solid var(--main-color);
+}
+
+
+
+
 body {
-  background-image:url("assets/background 1.png") ;
+    margin:0px;
+}
+
+
+body {
+  // background-image:url('./assets/background\ 1.png');
 background-position: center center;
 background-repeat: repeat;
 background-size: cover;
@@ -56,11 +97,15 @@ p{
   line-height: 2;
 }
 
-@media (max-width :400px) {
-.container{
---bs-gutter-x:0 ; --bs-gutter-y:0;
-}
-}
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+h1::selection,h2::selection,h3::selection,h4::selection,h5::selection,h6::selection,span::selection,span::selection
+{
+background-color:transparent;
+}
+p::selection{
+  background-color: var(--main-color);
+  color: var(--sec-color);
+}

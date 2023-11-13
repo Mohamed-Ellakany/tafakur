@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SalahTimesService } from '../salah-times.service';
-import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-pray',
@@ -26,11 +26,6 @@ console.log(this.salahTimes);
 
 })
 
-
-
-}
-
-}
 //this._SalahTimesService.getSalahTimes().subscribe({
 //   next:(res)=>{
 
@@ -38,3 +33,8 @@ console.log(this.salahTimes);
 //   },
 
 // })
+
+}
+
+
+}

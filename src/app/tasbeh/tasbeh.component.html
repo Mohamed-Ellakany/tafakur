@@ -1,21 +1,21 @@
 <div class="row g-4 px-lg-5">
 
-<div *ngFor="let zekr of zekrValues" class="col-xl-4 col-md-6 " >
+<div *ngFor="let zekr of zekrValues" class="col-xl-12 col-md-12 zekr  " >
 
-<div class="s-bg-color d-flex flex-column justify-content-between h-100  text-center  p-4 rounded-4 pointer" (click)="zekr.repeat>0 ? zekr.repeat=zekr.repeat -1:''">
+<div class="s-bg-color d-flex flex-column justify-content-between h-100  text-center  p-4 rounded-4 pointer border-mainColor" (click)="zekr.repeat>0 ? zekr.repeat=zekr.repeat -1:''">
 <h6 class="m-color">{{zekr.head}}</h6>
   <p class="m-color m-0 fw-semibold title">{{ zekr.title }}</p>
 
 
   <div>       <hr />
    <div
-     class="circle mt-auto rounded-circle m-bg-color s-color mx-auto d-flex justify-content-center align-items-center " [ngClass]="zekr.repeat>0?'not-active-bg-color':'m-bg-color'"
+     class="circle mt-auto rounded-circle m-bg-color s-color mx-auto d-flex justify-content-center align-items-center s-color border-mainColor" [ngClass]="zekr.repeat>0?'not-active-bg-color':'m-bg-color'"
    >
   <span *ngIf="zekr.repeat>0"> {{zekr.repeat}}</span>
   <i *ngIf="zekr.repeat==0" class="fa-solid fa-check"></i>
    </div>
 
-   <p class="m-0 mt-2 ">عدد التكرارات </p>
+   <p class="m-0 mt-2 m-color">عدد التكرارات </p>
 
 
  </div>

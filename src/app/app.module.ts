@@ -12,6 +12,7 @@ import { TasbehComponent } from './tasbeh/tasbeh.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ArbeenComponent } from './arbeen/arbeen.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

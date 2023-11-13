@@ -1,6 +1,11 @@
-<app-nav-bar ></app-nav-bar>
-<div class="container " >
+
+  <app-nav-bar [attr.data-theme]="mode"></app-nav-bar>
+<div class="container " [attr.data-theme]="mode">
 <router-outlet class="mt-5 "></router-outlet>
 </div>
+<div class="scrollUp position-fixed bg-dark-subtle m-color d-flex justify-content-center align-items-center rounded-circle pointer  " *ngIf="onScrollUp()" [attr.data-theme]="mode"  (click)="scrollUp()" ><i class="fas fa-arrow-up"></i></div>
+<div class="scrollDown position-fixed bg-dark-subtle m-color d-flex justify-content-center align-items-center rounded-circle pointer  " *ngIf="onScrollDown()" [attr.data-theme]="mode"  (click)="scrollDown()" ><i class="fas fa-arrow-down"></i></div>
+<app-footer class="mb-0 " (themeMode)="changeTheme()" [attr.data-theme]="mode" ></app-footer>
 
-<app-footer class="mb-0 "></app-footer>
+
+

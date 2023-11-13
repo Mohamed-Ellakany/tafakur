@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -6,21 +6,26 @@ import { Subject } from 'rxjs';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent  {
 innerWidth!:boolean
-
-constructor(){}
-ngOnInit(): void {
-  this.checkWidth()
-}
-checkWidth(){
-  if(window.innerWidth <= 500){
-    this.innerWidth=false
-}else{
-
-  this.innerWidth=true
+theme:string="light"
+constructor(){
+  this.themeMode = new EventEmitter<string>
 }
 
 
+@Output() themeMode:EventEmitter<string>
+
+changeTheme(){
+
+
+this.themeMode.emit(this.theme)
+
 }
+
+
+
+
+
+
 }
